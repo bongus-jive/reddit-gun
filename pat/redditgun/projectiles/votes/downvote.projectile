@@ -1,0 +1,13 @@
+{
+  "projectileName": "pat_redditgun_downvote",
+  "image": "downvote.png",
+  "speed": 50,
+  "actionOnReap": [
+    {
+      "action": "config",
+      "file": "/pat/redditgun/projectiles/explosion/explosion.config"
+    }
+  ],
+  "damageTeam": { "type": "indiscriminate" },
+  "damageType": "NoDamage"
+}

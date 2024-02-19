@@ -1,0 +1,86 @@
+{
+  "itemName": "pat_redditgun",
+  "price": 690,
+  "maxStack": 1,
+  "rarity": "Common",
+  "description": "\n\"In Honor of Kyrens Cakeday\"",
+  "shortdescription": "Reddit gun",
+  "category": "assaultRifle",
+  "twoHanded": true,
+  "itemTags": [ "weapon", "ranged", "assaultrifle" ],
+  "level": 1,
+
+  "inventoryIcon": "redditgun.png",
+
+  "animation": "redditgun.animation",
+  "animationParts": {
+    "butt": "",
+    "middle": "redditgun.png",
+    "barrel": "",
+    "muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+  },
+
+  "baseOffset": [ 0.8125, 0.25 ],
+  "muzzleOffset": [ 3.1875, 0.375 ],
+
+  "scripts": [ "/items/active/weapons/ranged/gun.lua" ],
+
+  "elementalType": "physical",
+
+  "primaryAbility": {
+    "scripts": [ "/items/active/weapons/ranged/gunfire.lua" ],
+    "class": "GunFire",
+
+    "fireTime": 0.133,
+    "baseDps": 1,
+    "energyUsage": 1,
+    "inaccuracy": 0.015,
+
+    "projectileCount": 1,
+    "fireType": "auto",
+
+    "projectileType": "pat_redditgun_upvote",
+    "projectileParameters": { },
+
+    "stances": {
+      "idle": {
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+
+        "allowRotate": true,
+        "allowFlip": true
+      },
+      "fire": {
+        "duration": 0,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+        "allowRotate": true,
+        "allowFlip": true,
+        "recoil": true
+      },
+      "cooldown": {
+        "duration": 0.1,
+        "armRotation": 0,
+        "weaponRotation": 0,
+        "twoHanded": true,
+        "allowRotate": true,
+        "allowFlip": true,
+        "recoil": true
+      }
+    }
+  },
+
+  "altAbility": {
+    "scripts": [ "/items/active/weapons/ranged/abilities/altfire.lua" ],
+    "class": "AltFireAttack",
+
+    "useParticleEmitter": false,
+    "usePrimaryFireSound": true,
+
+    "projectileType": "pat_redditgun_downvote"
+  },
+
+  "builder": "/items/buildscripts/buildunrandweapon.lua"
+}
